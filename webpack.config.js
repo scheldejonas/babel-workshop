@@ -5,7 +5,13 @@ var webpackConfig = {
     filename: "index.js"
   },
   module: {
-    loaders: []
+    loaders: [
+        {
+            loader: "babel-loader",
+            test: /.js$/,
+            exclude: /node_modules/
+        }
+    ]
   }
 };
 
